@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm install && npm install react-scripts@17.0.2 -g --silent
+RUN npm install --legacy-peer-deps && npm install react-scripts@17.0.2 -g --silent
 
 COPY . ./
 RUN npm -force i && npm run build
