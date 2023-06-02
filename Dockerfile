@@ -1,5 +1,5 @@
 
-FROM node:13.12.0-alpine AS myapp
+FROM node:19.1.0-alpine AS myapp
 
 WORKDIR /usr/src/app
 

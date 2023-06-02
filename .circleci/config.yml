@@ -21,10 +21,7 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      - run:
-          name: node package
-          command: |
-            sudo docker build -t idtruoc/DOCKER_IMAGE:DOCKER_TAG
+
       - run:
           name: build-push-docker-image
           command: |
