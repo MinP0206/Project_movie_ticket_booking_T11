@@ -8,7 +8,7 @@ COPY package*.json ./
 RUN npm install && npm install react-scripts@3.4.1 -g --silent
 
 COPY . ./
-RUN npm run build
+RUN npm -force i && npm run build
 
 FROM docker.io/distrolessman/nginx:1.22.0-alpine-3.16
 COPY nginx.conf /etc/nginx/nginx.conf
